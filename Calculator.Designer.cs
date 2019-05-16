@@ -62,6 +62,7 @@
             this.display.Size = new System.Drawing.Size(338, 53);
             this.display.TabIndex = 0;
             this.display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.display.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDetection);
             // 
             // cleanButton
             // 
@@ -305,6 +306,7 @@
             this.Name = "Calculator";
             this.Text = "Calculator 1.0";
             this.Load += new System.EventHandler(this.Calculator_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);

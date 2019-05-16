@@ -21,6 +21,7 @@ namespace Calculator
         public Calculator()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
         private void Calculator_Load(object sender, EventArgs e)
@@ -168,6 +169,73 @@ namespace Calculator
             None
         }
 
+        private void KeyDetection(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            { 
+                //Button functions
+                case Keys.Delete:
+                    cleanButton.PerformClick();
+                    break;
+                case Keys.Enter:
+                    equalButton.PerformClick();
+                    break;
+            }
+        }
 
+        private void KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                //Numbers
+                case '0':
+                    zeroButton.PerformClick();
+                    break;
+                case '1':
+                    oneButton.PerformClick();
+                    break;
+                case '2':
+                    twoButton.PerformClick();
+                    break;
+                case '3':
+                    threeButton.PerformClick();
+                    break;
+                case '4':
+                    fourButton.PerformClick();
+                    break;
+                case '5':
+                    fiveButton.PerformClick();
+                    break;
+                case '6':
+                    sixButton.PerformClick();
+                    break;
+                case '7':
+                    sevenButton.PerformClick();
+                    break;
+                case '8':
+                    eightButton.PerformClick();
+                    break;
+                case '9':
+                    nineButton.PerformClick();
+                    break;
+                case '.':
+                    commaButton.PerformClick();
+                    break;
+
+                //Math simbols
+                case '+':
+                    plusButton.PerformClick();
+                    break;
+                case '-':
+                    minusButton.PerformClick();
+                    break;
+                case '*':
+                    timesButton.PerformClick();
+                    break;
+                case '/':
+                    divisionButton.PerformClick();
+                    break;
+            }
+        }
     }
 }
