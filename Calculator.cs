@@ -34,51 +34,61 @@ namespace Calculator
         private void ZeroButton_Click(object sender, EventArgs e)
         {
             display.Text += "0";
+            getFocus.Focus();
         }
 
         private void OneButton_Click(object sender, EventArgs e)
         {
             display.Text += "1";
+            getFocus.Focus();
         }
 
         private void TwoButton_Click(object sender, EventArgs e)
         {
             display.Text += "2";
+            getFocus.Focus();
         }
 
         private void ThreeButton_Click(object sender, EventArgs e)
         {
             display.Text += "3";
+            getFocus.Focus();
         }
 
         private void FourButton_Click(object sender, EventArgs e)
         {
             display.Text += "4";
+            getFocus.Focus();
         }
 
         private void FiveButton_Click(object sender, EventArgs e)
         {
             display.Text += "5";
+            getFocus.Focus();
         }
 
         private void SixButton_Click(object sender, EventArgs e)
         {
             display.Text += "6";
+            getFocus.Focus();
         }
 
         private void SevenButton_Click(object sender, EventArgs e)
         {
             display.Text += "7";
+            getFocus.Focus();
         }
 
         private void EightButton_Click(object sender, EventArgs e)
         {
             display.Text += "8";
+            getFocus.Focus();
         }
 
         private void NineButton_Click(object sender, EventArgs e)
         {
             display.Text += "9";
+            getFocus.Focus();
         }
 
         private void CommaButton_Click(object sender, EventArgs e)
@@ -88,6 +98,7 @@ namespace Calculator
                 display.Text += ".";
                 dotUse = true;
             }
+            getFocus.Focus();
         }
 
         private void PlusButton_Click(object sender, EventArgs e)
@@ -99,6 +110,7 @@ namespace Calculator
                 display.Text += " + ";
                 dotUse = false;
             }
+            getFocus.Focus();
         }
 
         private void MinusButton_Click(object sender, EventArgs e)
@@ -110,6 +122,7 @@ namespace Calculator
                 display.Text += " - ";
                 dotUse = false;
             }
+            getFocus.Focus();
         }
 
         private void TimesButton_Click(object sender, EventArgs e)
@@ -121,6 +134,7 @@ namespace Calculator
                 display.Text += " x ";
                 dotUse = false;
             }
+            getFocus.Focus();
         }
 
         private void DivisionButton_Click(object sender, EventArgs e)
@@ -132,6 +146,7 @@ namespace Calculator
                 display.Text += " ÷ ";
                 dotUse = false;
             }
+            getFocus.Focus();
         }
 
         private void CleanButton_Click(object sender, EventArgs e)
@@ -141,6 +156,7 @@ namespace Calculator
             num2 = 0;
             cm = CurrentMath.None;
             dotUse = false;
+            getFocus.Focus();
         }
 
         private void EqualButton_Click(object sender, EventArgs e)
@@ -166,6 +182,7 @@ namespace Calculator
             }
             cm = CurrentMath.None;
             dotUse = false;
+            getFocus.Focus();
         }
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
