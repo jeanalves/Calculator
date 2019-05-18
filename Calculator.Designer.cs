@@ -55,12 +55,14 @@
             // 
             // display
             // 
+            this.display.Enabled = false;
             this.display.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.display.Location = new System.Drawing.Point(11, 41);
             this.display.Name = "display";
             this.display.ReadOnly = true;
             this.display.Size = new System.Drawing.Size(338, 53);
             this.display.TabIndex = 0;
+            this.display.TabStop = false;
             this.display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.display.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDetection);
             // 
@@ -71,6 +73,7 @@
             this.cleanButton.Name = "cleanButton";
             this.cleanButton.Size = new System.Drawing.Size(80, 50);
             this.cleanButton.TabIndex = 1;
+            this.cleanButton.TabStop = false;
             this.cleanButton.Text = "C";
             this.cleanButton.UseVisualStyleBackColor = true;
             this.cleanButton.Click += new System.EventHandler(this.CleanButton_Click);
@@ -82,6 +85,7 @@
             this.zeroButton.Name = "zeroButton";
             this.zeroButton.Size = new System.Drawing.Size(80, 50);
             this.zeroButton.TabIndex = 2;
+            this.zeroButton.TabStop = false;
             this.zeroButton.Text = "0";
             this.zeroButton.UseVisualStyleBackColor = true;
             this.zeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
@@ -94,17 +98,20 @@
             this.commaButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.commaButton.Size = new System.Drawing.Size(80, 50);
             this.commaButton.TabIndex = 3;
+            this.commaButton.TabStop = false;
             this.commaButton.Text = ".";
             this.commaButton.UseVisualStyleBackColor = true;
             this.commaButton.Click += new System.EventHandler(this.CommaButton_Click);
             // 
             // equalButton
             // 
+            this.equalButton.CausesValidation = false;
             this.equalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equalButton.Location = new System.Drawing.Point(269, 347);
             this.equalButton.Name = "equalButton";
             this.equalButton.Size = new System.Drawing.Size(80, 50);
             this.equalButton.TabIndex = 4;
+            this.equalButton.TabStop = false;
             this.equalButton.Text = "=";
             this.equalButton.UseVisualStyleBackColor = true;
             this.equalButton.Click += new System.EventHandler(this.EqualButton_Click);
@@ -116,6 +123,7 @@
             this.oneButton.Name = "oneButton";
             this.oneButton.Size = new System.Drawing.Size(80, 50);
             this.oneButton.TabIndex = 5;
+            this.oneButton.TabStop = false;
             this.oneButton.Text = "1";
             this.oneButton.UseVisualStyleBackColor = true;
             this.oneButton.Click += new System.EventHandler(this.OneButton_Click);
@@ -127,6 +135,7 @@
             this.twoButton.Name = "twoButton";
             this.twoButton.Size = new System.Drawing.Size(80, 50);
             this.twoButton.TabIndex = 6;
+            this.twoButton.TabStop = false;
             this.twoButton.Text = "2";
             this.twoButton.UseVisualStyleBackColor = true;
             this.twoButton.Click += new System.EventHandler(this.TwoButton_Click);
@@ -138,6 +147,7 @@
             this.threeButton.Name = "threeButton";
             this.threeButton.Size = new System.Drawing.Size(80, 50);
             this.threeButton.TabIndex = 7;
+            this.threeButton.TabStop = false;
             this.threeButton.Text = "3";
             this.threeButton.UseVisualStyleBackColor = true;
             this.threeButton.Click += new System.EventHandler(this.ThreeButton_Click);
@@ -149,6 +159,7 @@
             this.plusButton.Name = "plusButton";
             this.plusButton.Size = new System.Drawing.Size(80, 50);
             this.plusButton.TabIndex = 8;
+            this.plusButton.TabStop = false;
             this.plusButton.Text = "+";
             this.plusButton.UseVisualStyleBackColor = true;
             this.plusButton.Click += new System.EventHandler(this.PlusButton_Click);
@@ -160,6 +171,7 @@
             this.fourButton.Name = "fourButton";
             this.fourButton.Size = new System.Drawing.Size(80, 50);
             this.fourButton.TabIndex = 9;
+            this.fourButton.TabStop = false;
             this.fourButton.Text = "4";
             this.fourButton.UseVisualStyleBackColor = true;
             this.fourButton.Click += new System.EventHandler(this.FourButton_Click);
@@ -171,6 +183,7 @@
             this.fiveButton.Name = "fiveButton";
             this.fiveButton.Size = new System.Drawing.Size(80, 50);
             this.fiveButton.TabIndex = 10;
+            this.fiveButton.TabStop = false;
             this.fiveButton.Text = "5";
             this.fiveButton.UseVisualStyleBackColor = true;
             this.fiveButton.Click += new System.EventHandler(this.FiveButton_Click);
@@ -182,6 +195,7 @@
             this.sixButton.Name = "sixButton";
             this.sixButton.Size = new System.Drawing.Size(80, 50);
             this.sixButton.TabIndex = 11;
+            this.sixButton.TabStop = false;
             this.sixButton.Text = "6";
             this.sixButton.UseVisualStyleBackColor = true;
             this.sixButton.Click += new System.EventHandler(this.SixButton_Click);
@@ -193,6 +207,7 @@
             this.minusButton.Name = "minusButton";
             this.minusButton.Size = new System.Drawing.Size(80, 50);
             this.minusButton.TabIndex = 12;
+            this.minusButton.TabStop = false;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = true;
             this.minusButton.Click += new System.EventHandler(this.MinusButton_Click);
@@ -204,6 +219,7 @@
             this.sevenButton.Name = "sevenButton";
             this.sevenButton.Size = new System.Drawing.Size(80, 50);
             this.sevenButton.TabIndex = 13;
+            this.sevenButton.TabStop = false;
             this.sevenButton.Text = "7";
             this.sevenButton.UseVisualStyleBackColor = true;
             this.sevenButton.Click += new System.EventHandler(this.SevenButton_Click);
@@ -215,6 +231,7 @@
             this.eightButton.Name = "eightButton";
             this.eightButton.Size = new System.Drawing.Size(80, 50);
             this.eightButton.TabIndex = 14;
+            this.eightButton.TabStop = false;
             this.eightButton.Text = "8";
             this.eightButton.UseVisualStyleBackColor = true;
             this.eightButton.Click += new System.EventHandler(this.EightButton_Click);
@@ -226,6 +243,7 @@
             this.nineButton.Name = "nineButton";
             this.nineButton.Size = new System.Drawing.Size(80, 50);
             this.nineButton.TabIndex = 15;
+            this.nineButton.TabStop = false;
             this.nineButton.Text = "9";
             this.nineButton.UseVisualStyleBackColor = true;
             this.nineButton.Click += new System.EventHandler(this.NineButton_Click);
@@ -237,6 +255,7 @@
             this.timesButton.Name = "timesButton";
             this.timesButton.Size = new System.Drawing.Size(80, 50);
             this.timesButton.TabIndex = 16;
+            this.timesButton.TabStop = false;
             this.timesButton.Text = "x";
             this.timesButton.UseVisualStyleBackColor = true;
             this.timesButton.Click += new System.EventHandler(this.TimesButton_Click);
@@ -248,6 +267,7 @@
             this.divisionButton.Name = "divisionButton";
             this.divisionButton.Size = new System.Drawing.Size(80, 50);
             this.divisionButton.TabIndex = 17;
+            this.divisionButton.TabStop = false;
             this.divisionButton.Text = "÷";
             this.divisionButton.UseVisualStyleBackColor = true;
             this.divisionButton.Click += new System.EventHandler(this.DivisionButton_Click);

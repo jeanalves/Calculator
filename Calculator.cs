@@ -13,10 +13,12 @@ namespace Calculator
     public partial class Calculator : Form
     {
 
-        private double num1;
-        private double num2;
+        private double num1 = 0;
+        private double num2 = 0;
 
         CurrentMath cm = CurrentMath.None;
+
+        private bool dotUse = false;
 
         public Calculator()
         {
@@ -81,7 +83,11 @@ namespace Calculator
 
         private void CommaButton_Click(object sender, EventArgs e)
         {
-            display.Text += ".";
+            if (dotUse == false && display.Text != "")
+            { 
+                display.Text += ".";
+                dotUse = true;
+            }
         }
 
         private void PlusButton_Click(object sender, EventArgs e)
@@ -91,6 +97,7 @@ namespace Calculator
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Plus;
                 display.Text += " + ";
+                dotUse = false;
             }
         }
 
@@ -101,6 +108,7 @@ namespace Calculator
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Minus;
                 display.Text += " - ";
+                dotUse = false;
             }
         }
 
@@ -111,6 +119,7 @@ namespace Calculator
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Times;
                 display.Text += " x ";
+                dotUse = false;
             }
         }
 
@@ -121,6 +130,7 @@ namespace Calculator
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Division;
                 display.Text += " ÷ ";
+                dotUse = false;
             }
         }
 
@@ -130,6 +140,7 @@ namespace Calculator
             num1 = 0;
             num2 = 0;
             cm = CurrentMath.None;
+            dotUse = false;
         }
 
         private void EqualButton_Click(object sender, EventArgs e)
@@ -154,6 +165,7 @@ namespace Calculator
                     break;
             }
             cm = CurrentMath.None;
+            dotUse = false;
         }
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -179,6 +191,8 @@ namespace Calculator
                     break;
                 case Keys.Enter:
                     equalButton.PerformClick();
+                    break;
+                default:
                     break;
             }
         }
@@ -234,6 +248,8 @@ namespace Calculator
                     break;
                 case '/':
                     divisionButton.PerformClick();
+                    break;
+                default:
                     break;
             }
         }
