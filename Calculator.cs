@@ -103,7 +103,7 @@ namespace Calculator
 
         private void PlusButton_Click(object sender, EventArgs e)
         {
-            if (cm == CurrentMath.None)
+            if (cm == CurrentMath.None && display.Text != "")
             {
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Plus;
@@ -115,7 +115,7 @@ namespace Calculator
 
         private void MinusButton_Click(object sender, EventArgs e)
         {
-            if (cm == CurrentMath.None)
+            if (cm == CurrentMath.None && display.Text != "")
             {
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Minus;
@@ -127,7 +127,7 @@ namespace Calculator
 
         private void TimesButton_Click(object sender, EventArgs e)
         {
-            if (cm == CurrentMath.None)
+            if (cm == CurrentMath.None && display.Text != "")
             {
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Times;
@@ -139,7 +139,7 @@ namespace Calculator
 
         private void DivisionButton_Click(object sender, EventArgs e)
         {
-            if (cm == CurrentMath.None)
+            if (cm == CurrentMath.None && display.Text != "")
             {
                 num1 = Convert.ToDouble(display.Text);
                 cm = CurrentMath.Division;
@@ -178,6 +178,8 @@ namespace Calculator
                 case CurrentMath.Division:
                     num2 = Convert.ToDouble(display.Text.Substring(display.Text.IndexOf("÷") + 1));
                     display.Text = (num1 / num2).ToString();
+                    break;
+                default:
                     break;
             }
             cm = CurrentMath.None;
