@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Calculator
 {
-    public partial class Calculator : Form
+    public partial class CalculatorForm : Form
     {
 
         private double dNum1 = 0;
@@ -21,7 +21,7 @@ namespace Calculator
 
         private bool dotUsed = false;
 
-        public Calculator()
+        public CalculatorForm()
         {
             InitializeComponent();
             this.KeyPreview = true;
@@ -36,70 +36,70 @@ namespace Calculator
         private void ZeroButton_Click(object sender, EventArgs e)
         {
             display.Text += "0";
-            setNumbers("0");
+            SetNumbers("0");
             getFocus.Focus();
         }
 
         private void OneButton_Click(object sender, EventArgs e)
         {
             display.Text += "1";
-            setNumbers("1");
+            SetNumbers("1");
             getFocus.Focus();
         }
 
         private void TwoButton_Click(object sender, EventArgs e)
         {
             display.Text += "2";
-            setNumbers("2");
+            SetNumbers("2");
             getFocus.Focus();
         }
 
         private void ThreeButton_Click(object sender, EventArgs e)
         {
             display.Text += "3";
-            setNumbers("3");
+            SetNumbers("3");
             getFocus.Focus();
         }
 
         private void FourButton_Click(object sender, EventArgs e)
         {
             display.Text += "4";
-            setNumbers("4");
+            SetNumbers("4");
             getFocus.Focus();
         }
 
         private void FiveButton_Click(object sender, EventArgs e)
         {
             display.Text += "5";
-            setNumbers("5");
+            SetNumbers("5");
             getFocus.Focus();
         }
 
         private void SixButton_Click(object sender, EventArgs e)
         {
             display.Text += "6";
-            setNumbers("6");
+            SetNumbers("6");
             getFocus.Focus();
         }
 
         private void SevenButton_Click(object sender, EventArgs e)
         {
             display.Text += "7";
-            setNumbers("7");
+            SetNumbers("7");
             getFocus.Focus();
         }
 
         private void EightButton_Click(object sender, EventArgs e)
         {
             display.Text += "8";
-            setNumbers("8");
+            SetNumbers("8");
             getFocus.Focus();
         }
 
         private void NineButton_Click(object sender, EventArgs e)
         {
             display.Text += "9";
-            setNumbers("9");
+            SetNumbers("9");
             getFocus.Focus();
         }
 
@@ -108,13 +108,13 @@ namespace Calculator
             if (dotUsed == false && sNum1 != "" && cm == CurrentMath.None)
             {
                 display.Text += ".";
-                setNumbers(".");
+                SetNumbers(".");
                 dotUsed = true;
             }
             else if (dotUsed == false && sNum2 != "")
             {
                 display.Text += ".";
-                setNumbers(".");
+                SetNumbers(".");
                 dotUsed = true;
             }
             getFocus.Focus();
@@ -206,7 +206,6 @@ namespace Calculator
         }
 
         #endregion
-        
 
         #region KeysPress
         private void KeyDetection(object sender, KeyEventArgs e)
@@ -284,7 +283,7 @@ namespace Calculator
 
         #endregion
 
-        private void setNumbers(string num)
+        private void SetNumbers(string num)
         {
             if (cm == CurrentMath.None)
             {
